@@ -30,11 +30,11 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    @media screen and (min-width: 1024px) {
+    @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 40px;
     }
-    @media screen and (max-width: 1023.98px) {
+    @media screen and (min-width: 1023.98px) {
       grid-auto-flow: column;
       scroll-snap-type: x mandatory;
       overflow-x: auto;
