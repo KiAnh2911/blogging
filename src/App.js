@@ -18,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage></HomePage>}></Route>
           <Route path="/sign-in" element={<SignInPage></SignInPage>}></Route>
           <Route path="/sign-up" element={<SignUpPage></SignUpPage>}></Route>
+          <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
           <Route
             path="/blog"
             element={<PostDetailsPage></PostDetailsPage>}
@@ -27,7 +28,7 @@ function App() {
             element={<NotFoundPage></NotFoundPage>}
           ></Route>
           <Route
-            path="/:slug"
+            path="/<slug>"
             element={<PostDetailsPage></PostDetailsPage>}
           ></Route>
           <Route element={<DashboardLayout></DashboardLayout>}>
@@ -44,7 +45,6 @@ function App() {
               element={<PostAddNew></PostAddNew>}
             ></Route>
           </Route>
-          <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
         </Routes>
       </AuthProvider>
     </div>
